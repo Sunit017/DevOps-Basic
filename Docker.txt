@@ -36,7 +36,7 @@ Common Docker Components:------------
 
 Docker Engine:--------
  The core component that enables the creation and management of Docker containers.
-Dockerfile:------
+Dockerfile:------ 
 A text file that contains instructions for building a Docker image.
 Docker Image:---------
  A lightweight, standalone, and executable software package that includes everything needed to run a piece of software.
@@ -44,3 +44,39 @@ Docker Container:--------
  A running instance of a Docker image, encapsulating an application and its environment.
 Docker Hub:-------
  A cloud-based repository where Docker users can store and share Docker images.
+ 
+ Commands =====
+ -------------------
+ Check docker version = docker --v
+ pull image from docker hub = docker pull <image_name >
+ check how images available = docker images
+ search image = docker search image name 
+ 
+ Start Container ========
+ ------------------------------
+ docker run image name /image id - to run docker image 
+ docker ps - see the container 
+ docker ps -a = all the container 
+ docker run --env MYSQL_ROOT_PASSWORD = access the properties 
+ docker run -d = detach means (it will run in background )
+ docker run --name <name of container > -d <image name > = to give the name of container 
+ 
+ docker run --name <container name > -it -d <image name > = run the image  with interactive mode 
+ 
+ docker exec it <container id> <command> = now container is executed 
+ 
+ docker inspect <container id > = give all the information about container 
+ 
+ docker stop <container name > = to stop the container 
+ docker rm <container id > = remove from used
+
+docker login = login in dockerhub so that we can push our images 
+docker commit = 
+docker push = helps to push the docker container into docker hub 
+
+
+How to create own docker image ----------
+===============================================
+
+ 
+ 

@@ -1,0 +1,124 @@
+
+
+
+
+GIT--
+------
+DVCS - Distributed Version Control System 
+CVCS - Centralized Versio Control System 
+
+Working Directory - Where you write your code 
+Staging Area - here we are giving it to git to manage / git add filename 	
+
+git diff - if want to check what you added in file use this command and also use this command in working directory
+git diff --staging - you can check changes after moving the file to staging area 
+
+readme.md - markdown 
+
+Git remove - git rm --cached filename // delete file from git (after adding and commiting file if want to delete from staging )
+
+git push origin main /origin means the origin where you are pushing and fetching 
+
+Tagging 
+
+Branch - git checkout (old ) / git switch (new ) /
+for creating branch - git checkout -b branchname 
+going back to previous branc - git switch -
+delete branch - git branch -d branchname 
+
+git merge - suppose i want want merge my feature branch into main branch . do git checkout come to main branch then do git merge feature1
+
+
+DEVOPS :
+
+Devops is collaoration between development and operation teams , devops is a process 
+
+For - Planning - Jira , Codebase - git ,Building - Maven ,Testing - Selenium , Deploy - Docker , Operate - CHEF ,Monitor -Nagios , Integration -Jenkins 
+
+ 
+
+
+DOCKER-:
+
+What is Docker?
+Ans-: Docker is a tool designed to make it easier to build,deploy and run application by using container .
+
+How Docker Resolve Issue ?
+Ans -: Container allow developer to package the up and application with all other parts it needs such as libraries and other depedencies and ship it all out of 1 package .
+
+Docker WorkFlow :-
+
+Docker File (as a developer i wrote docker file ) ----> (By Help of Command i created ) Docker Image (i.e completely scaliton of application) --> Docker Container
+ (Running instacne docker image) ---> DockerHub (Kind of Reposistory / We can pull the docker image ) --> 1.Staging Server ,2.Production Sever 
+ 
+To Build Docker Image - docker build -t springboot-docker.jar // t= target and springboot-docker= jar file name 
+
+docker image ls = to check list of docker image running 
+
+What is Docker imgae ?
+Ans - Docker Image is a template with instruction which is used for creating containers.
+Docker image is built using a file called docker file .
+Docker image is stored in docker hub 
+
+What is Docker Container ?
+Ans - Docker Container is a software package , which include application and their depedencies to run application.
+Docker Container run on the same infrastructure and share operation system with its other container ,Each application run in isolation 
+
+Advantage of Docker -:
+
+1. Reduce the size of dev env with help of small OS foot prints.
+2.Docker will use host operation system and then your container will run .
+3.Deploy the container anywhere .
+4. docker container is lightweight .
+
+
+WHAT IS BASICALLY CI/CD MEANS ?
+Ans - As a developer write a code and commit the code into github then have to integrate jenkins for for ci/cd means build the project using maven and build the docker imgae
+and push the docker image to docker hub  
+
+Jenkinfile -: this jenkin files basically containes differnt stages , stage 1 - is to build the project , stage 2- build the docker image , stage 3 - push the docker image into hub
+
+To deployment anything in kubernaties cluster we need 2 object 1.deployment and 2. service we configure in deployment file 
+
+In Jenkins configure new stage for kubernaties deployment 
+
+KUBERNETES:-
+
+Kubernetes is an open source container management tool , it automates deploying ,scalling and managing containerized application .
+Kubernetes also called as K8S 
+
+
+1. Docker
+Purpose: Docker is a containerization platform. It packages an application and its dependencies into a container, ensuring it runs consistently across environments.
+How it Works:
+You define the application and its dependencies in a Dockerfile.
+Docker creates an image from the Dockerfile.
+Containers are instances of the image, running the application in an isolated environment.
+Key Features:
+Portability: Containers can run on any system with Docker installed.
+Isolation: Each container runs independently.
+Efficiency: Containers share the host OS kernel, reducing overhead compared to virtual machines.
+
+2. Kubernetes
+Purpose: Kubernetes is an orchestration tool for managing containerized applications at scale. It automates deployment, scaling, and management of containers.
+How it Works:
+Applications are deployed as pods, which are the smallest deployable units in Kubernetes.
+Kubernetes manages pods using controllers like Deployments, StatefulSets, etc.
+Features like load balancing, auto-scaling, and rolling updates are built-in.
+Key Features:
+Scalability: Automatically scales applications based on demand.
+High Availability: Ensures applications stay up and running.
+Self-Healing: Restarts failed containers and replaces unresponsive pods.
+
+
+3. Jenkins
+Purpose: Jenkins is a CI/CD (Continuous Integration/Continuous Delivery) tool. It automates the process of building, testing, and deploying applications.
+How it Works:
+Jenkins uses pipelines (defined as code) to automate workflows.
+Triggers (like code commits) initiate builds.
+Jenkins integrates with tools like Docker and Kubernetes to deploy applications.
+Key Features:
+Automation: Builds, tests, and deploys code automatically.
+Extensibility: Supports plugins for various tools and technologies.
+Integration: Works seamlessly with Docker, Kubernetes, Git, and more.
+
